@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        let water = {
+            name : '생 수',
+            amount : 500
+        }
+        let milkis = {
+            name : '밀키스',
+            amount : 800
+        }
+        let coke = {
+            name : '콜 라',
+            amount : 1200
+        }
+        let hot6 = {
+            name : '핫식스',
+            amount : 1500
+        }
+        let fanta = {
+            name : '환 타',
+            amount : 2100
+        }
+        let condition = {
+            name : '컨디션 파워',
+            amount : 4500
+        }
+
+        var menuList = [water, milkis, coke, hot6, fanta, condition]
+
+        function show(type){
+            const resultElement = document.getElementById('result');
+            let value = resultElement.innerText;
+            if(type === 'water'){
+                value = value + menuList[0].name +'----'+ menuList[0].amount;
+                }else if(type === 'coke'){
+                    value = value + menuList[2].name +'----'+ menuList[2].amount;
+                }
+
+        resultElement.innerText = value;
+        }
+
+    </script>
+</head>
+<body>
+    <input type= "button" value = "생수 500원" onclick ="show('water')">
+    <input type= "button" value = "콜라 1000원" onclick ="show('coke')">
+    <input type= "button" value = "사이다 1200원" onclick ="">
+
+    <div id = 'result'></div>
+
+    <!-- <table border="1" width = "400" height = '400'>
+        <tr align = 'center'>
+            <td width = '150'>
+                구매 목록
+            </td>
+            <td  width = '250'>
+                <ul>
+                    <li id = 'result'></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <script>
+
+    document.write(water.name);
+    </script> -->
+
+</body>
+</html>
